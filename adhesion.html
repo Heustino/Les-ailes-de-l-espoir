@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Rejoindre l’association | Les Ailes de l’Espoir</title>
+<style>
+:root{--bg:#050b1f;--bg2:#0b1736;--card:rgba(255,255,255,.05);--gold:#f2b632;--gold2:#ffd36b;--blue:#2f6bff;--tx:#fff;--mut:#c4cce0;--bd:rgba(255,255,255,.22)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body::before{content:"";position:fixed;inset:0;background:url(images/fond.jpg) center/contain no-repeat;opacity:.07;z-index:-1;pointer-events:none}
+body{font-family:Inter,"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+img{max-width:100%;display:block}a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(5,11,31,.82);backdrop-filter:blur(10px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;line-height:1.1}
+.logo span{display:block;font-size:.62rem;letter-spacing:.2em;color:var(--gold);font-weight:600}
+.logo img{height:48px;width:auto;filter:drop-shadow(0 0 8px rgba(242,182,50,.35))}
+nav ul{display:flex;gap:26px;list-style:none;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+nav a{padding:6px 0;border-bottom:2px solid transparent}nav a:hover,nav a.on{color:var(--gold);border-color:var(--gold)}
+.right{display:flex;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:7px;font-weight:800;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:.2s}
+.gold{background:linear-gradient(135deg,var(--gold),#d89a14);color:#11182e}.gold:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(242,182,50,.35)}
+.line{border-color:var(--bd);color:#fff;background:rgba(0,0,0,.25)}.line:hover{border-color:var(--gold);color:var(--gold)}
+.sm{padding:9px 16px;font-size:.75rem}
+.lang{background:none;border:1px solid var(--bd);color:#fff;border-radius:6px;padding:8px 11px;font-weight:700;cursor:pointer}
+.burger{display:none;background:none;border:0;color:#fff;font-size:1.8rem;cursor:pointer}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:110px 0 50px;background:linear-gradient(90deg,rgba(5,11,31,.96) 0%,rgba(5,11,31,.78) 45%,rgba(5,11,31,.15) 100%),url(images/hero.jpg) 65% center/cover}
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:120px;background:linear-gradient(transparent,var(--bg))}
+.hero .wrap{position:relative;z-index:2}
+.kick{display:flex;align-items:center;gap:12px;font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px}
+.kick:before{content:"";width:50px;height:1px;background:#fff}
+h1{font-size:clamp(2.5rem,6.4vw,5rem);line-height:1.02;font-weight:900;text-transform:uppercase;max-width:640px}
+h1 em{display:block;font-style:normal;color:var(--gold)}
+.lead{max-width:520px;margin:22px 0 28px;color:#e5eaf7}.lead b{color:var(--gold2)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:22px}
+.trust{font-size:.78rem;font-weight:700;color:var(--mut);margin-bottom:26px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bd);border-radius:14px;background:rgba(5,11,31,.72);backdrop-filter:blur(8px);max-width:760px}
+.st{display:flex;align-items:center;gap:12px;padding:16px 18px;border-left:1px solid var(--bd)}.st:first-child{border:0}
+.ic{flex:none;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#c98a10);display:grid;place-items:center;font-size:1.3rem}
+.st b{display:block;font-size:1.3rem;line-height:1.1}.st small{font-size:.72rem;color:var(--mut);line-height:1.2;display:block}
+.badge{position:absolute;right:4%;bottom:130px;z-index:3;background:#fff;color:#11182e;border-radius:40px 8px 40px 8px;padding:14px 20px;font-size:.85rem;font-weight:700;display:flex;gap:10px;align-items:center;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+section{padding:90px 0}.alt{background:rgba(11,23,54,.85)}
+.tag{color:var(--gold);font-size:.8rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:8px 0 14px;font-weight:900}
+.sub{color:var(--mut);max-width:640px}.head{margin-bottom:44px}
+.grid{display:grid;gap:22px}.g2{grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:28px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:var(--gold)}
+.card .ic{margin-bottom:16px}.card h3{margin-bottom:8px;font-size:1.12rem}.card p{color:var(--mut);font-size:.93rem}
+.alogo{text-align:center;padding:34px 24px;background:radial-gradient(circle at 50% 40%,rgba(47,107,255,.28),transparent 70%),var(--card)}.alogo img{max-width:380px;width:100%;margin:auto;filter:drop-shadow(0 0 28px rgba(242,182,50,.3))}.alogo p{color:var(--gold2);font-style:italic;margin-top:14px}
+.vc{text-align:center}.vc .ic{margin:0 auto 14px;width:62px;height:62px;font-size:1.6rem}.vc h3{color:var(--gold2);font-size:1.3rem}
+.call .card{text-align:left}.call .grid{margin-top:34px}
+.band{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;background:linear-gradient(135deg,rgba(47,107,255,.22),rgba(242,182,50,.16));border:1px solid var(--bd);border-radius:16px;padding:28px;margin-bottom:46px}.band h3{color:#fff;font-size:1.3rem}.band p{max-width:460px}.band .news{margin:0;flex:1;min-width:280px}
+.flogo{width:190px;margin-bottom:12px;filter:drop-shadow(0 0 16px rgba(242,182,50,.25))}
+.soc{display:flex;gap:10px;margin-top:14px}.soc a{width:38px;height:38px;border-radius:50%;border:1px solid var(--bd);display:grid;place-items:center;font-weight:800;font-size:.8rem;color:#fff}.soc a:hover{background:var(--gold);color:#11182e;border-color:var(--gold)}
+.legal{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;align-items:center}.legal a:hover{color:var(--gold)}
+.vals{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.vals span{border:1px solid var(--gold);color:var(--gold2);border-radius:30px;padding:6px 16px;font-weight:700;font-size:.85rem}
+.num{text-align:center}.num .ic{margin:0 auto 12px;width:58px;height:58px}.num b{font-size:2.2rem;display:block;color:var(--gold2)}.num p{color:var(--mut);font-size:.88rem}
+.gal{grid-template-columns:repeat(3,1fr)}
+.gi{border:1px solid var(--bd);border-radius:16px;overflow:hidden;background:var(--card)}
+.ph{height:170px;background:linear-gradient(135deg,#17306f,#0b1736 55%,#7a5a14);display:grid;place-items:center;font-size:2.6rem}
+.gi div:last-child{padding:18px}.gi small{color:var(--gold);font-weight:700}.gi p{color:var(--mut);font-size:.9rem;margin-top:6px}
+.call{text-align:center;background:linear-gradient(135deg,rgba(47,107,255,.25),rgba(242,182,50,.2));border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.call .cta{justify-content:center;margin:26px 0 0}.call .sub{margin:auto}
+.quote p{font-style:italic;color:#e5eaf7;margin-bottom:14px}.quote b{color:var(--gold)}
+.part{display:flex;flex-wrap:wrap;gap:34px;justify-content:center;margin-top:46px;color:var(--mut);font-weight:800;letter-spacing:.06em;opacity:.8}
+.news{display:flex;gap:10px;max-width:520px;margin-top:18px}
+input{flex:1;padding:13px 16px;border-radius:7px;border:1px solid var(--bd);background:rgba(255,255,255,.07);color:#fff;font:inherit;min-width:0}
+footer{background:#030715;padding:60px 0 24px;border-top:1px solid var(--bd);font-size:.9rem;color:var(--mut)}
+.fg{grid-template-columns:1.6fr 1fr 1fr 1.2fr;margin-bottom:34px}.fg h4{color:#fff;margin-bottom:12px}.fg li{list-style:none;margin-bottom:6px}.fg a:hover{color:var(--gold)}
+.copy{border-top:1px solid var(--bd);padding-top:18px;text-align:center;font-size:.8rem}
+@media(max-width:960px){
+.burger{display:block}nav{position:absolute;top:70px;left:0;right:0;background:var(--bg);display:none;padding:16px 20px;border-bottom:1px solid var(--bd)}nav.open{display:block}nav ul{flex-direction:column;gap:14px}
+.right .btn{display:none}.g2,.g3,.gal,.fg{grid-template-columns:1fr}.g4{grid-template-columns:1fr 1fr}.g5{grid-template-columns:repeat(2,1fr)}
+.stats{grid-template-columns:1fr 1fr}.st:nth-child(3){border-left:0}.st:nth-child(n+3){border-top:1px solid var(--bd)}
+.badge{display:none}.hero{background-position:70% center}}
+@media(max-width:480px){.st{padding:12px}.ic{width:38px;height:38px;font-size:1rem}.news{flex-direction:column}.g4{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+
+.page{padding:120px 0 70px}.phead{text-align:center;margin-bottom:34px}.phead .sub{margin:auto}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0 0;text-align:left}.steps div{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:14px 16px;font-size:.88rem;color:var(--mut)}.steps b{color:var(--gold2);display:block}
+form.f{max-width:860px;margin:auto}
+fieldset{border:1px solid var(--bd);border-radius:16px;padding:26px;margin-bottom:22px;background:var(--card)}
+legend{padding:0 12px;color:var(--gold2);font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.85rem}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}.fld{margin-bottom:16px;display:flex;flex-direction:column;gap:6px}.fld.w{grid-column:1/-1}
+label.l{font-size:.85rem;font-weight:700;color:#e5eaf7}label.l i{color:var(--gold);font-style:normal}
+select,textarea{padding:13px 16px;border-radius:7px;border:1px solid var(--bd);background:rgba(255,255,255,.07);color:#fff;font:inherit;width:100%}
+select option{color:#11182e}textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){border-color:#ff6b6b}
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:13px 14px;border:1px solid var(--bd);border-radius:10px;cursor:pointer;font-size:.9rem;background:rgba(255,255,255,.04)}
+.opt:has(input:checked){border-color:var(--gold);background:rgba(242,182,50,.12)}
+.opt input{flex:none;width:auto;margin-top:4px;accent-color:#f2b632}
+.chk{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;font-size:.9rem;color:#e5eaf7}.chk input{flex:none;width:auto;margin-top:5px;accent-color:#f2b632}
+.send{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:10px}.send .btn{min-width:260px;justify-content:center;font-size:.95rem}
+.note{text-align:center;color:var(--mut);font-size:.82rem;margin-top:14px}
+#done{display:none;max-width:860px;margin:26px auto 0;text-align:center;border:1px solid var(--gold);border-radius:16px;padding:28px;background:rgba(242,182,50,.1)}#done h3{color:var(--gold2);margin-bottom:8px}#done .cta{justify-content:center;margin:18px 0 0}
+@media(max-width:700px){.row,.steps{grid-template-columns:1fr}fieldset{padding:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a href="index.html#home" class="logo"><img src="images/logo-emblem.png" alt="Logo Les Ailes de l’Espoir"><div>LES AILES DE L’ESPOIR<span data-i="motto"></span></div></a>
+<nav id="menu"><ul>
+<li><a href="index.html#home" data-i="n1"></a></li><li><a href="index.html#about" data-i="n2"></a></li><li><a href="index.html#domains" data-i="n3"></a></li><li><a href="index.html#impact" data-i="n4"></a></li><li><a href="#" class="on" data-i="n5"></a></li><li><a href="index.html#contact" data-i="n6"></a></li></ul></nav>
+<div class="right"><button class="lang" id="lang" aria-label="Langue">EN</button><a href="https://mboaticket.com/collecte/soutien-aux-orphelins-pour-noel-2026/" class="btn gold sm">♥ <span data-i="donate"></span></a><button class="burger" id="bg" aria-label="Menu">☰</button></div>
+</div></header>
+<main class="page"><div class="wrap">
+<div class="phead"><span class="tag" data-i="p_tag"></span><h1 style="font-size:clamp(2rem,5vw,3.2rem);max-width:none;text-transform:none;margin:8px 0" data-i="p_h1"></h1><p class="sub" data-i="p_sub"></p>
+<div class="steps"><div><b>1</b><span data-i="p_s1"></span></div><div><b>2</b><span data-i="p_s2"></span></div><div><b>3</b><span data-i="p_s3"></span></div></div></div>
+<form class="f" id="form" novalidate></form>
+<div id="done" role="status"><h3 data-i="d_t"></h3><p id="dmsg" data-i="d_p"></p><div class="cta"><button type="button" class="btn gold" id="again" data-i="d_dl"></button><button type="button" class="btn line" id="mailb" data-i="d_ml"></button></div></div>
+</div></main>
+<footer id="contact">
+        <div class="wrap">
+            <div class="band">
+                <div>
+                    <h3 data-i="fnl"></h3>
+                    <p data-i="fnlp"></p>
+                </div>
+                <form class="news" onsubmit="event.preventDefault();this.reset();alert(D[L].ok)">
+                    <input type="email" required data-ph="mail" aria-label="Email">
+                    <button class="btn gold sm" data-i="sub"></button>
+                </form>
+            </div>
+            <div class="grid fg">
+                <div>
+                    <img class="flogo" src="images/logo-full.png" alt="Les Ailes de l’Espoir" loading="lazy">
+                    <p data-i="fabout"></p>
+                    <div class="soc">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">ig</a>
+                        <a href="#" aria-label="TikTok">tk</a>
+                        <a href="#" aria-label="WhatsApp">wa</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 data-i="fl"></h4>
+                    <ul>
+                        <li><a href="#about" data-i="n2"></a></li>
+                        <li><a href="#domains" data-i="n3"></a></li>
+                        <li><a href="#impact" data-i="n4"></a></li>
+                        <li><a href="#involved" data-i="n5"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i="fh"></h4>
+                    <ul>
+                        <li><a href="https://mboaticket.com/collecte/soutien-aux-orphelins-pour-noel-2026/" data-i="donate"></a></li>
+                        <li><a href="adhesion.html" data-i="vol"></a></li>
+                        <li><a href="adhesion.html" data-i="fpa"></a></li>
+                        <li><a href="" data-i="ftr"></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 data-i="n6"></h4>
+                    <ul>
+                        <li>Yaoundé, Cameroun</li>
+                        <li>christian.nkouateba@gmail.com</li>
+                        <li>+237 690 634 101 / 653 367 178</li>
+                        <li><span data-i="fhours"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copy legal">
+                <span>© 
+                    <span id="yr"></span> Les Ailes de l’Espoir — 
+                    <span data-i="rights"></span>
+                </span>
+                <span>
+                    <a href="#" data-i="lg1"></a> · 
+                    <a href="#" data-i="lg2"></a>
+                </span>
+                <span data-i="motto"></span>
+            </div>
+        </div>
+    </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+const D={
+fr:{tv:"Nos valeurs",vh:"Trois principes qui guident chacune de nos actions",vd1:"Croire en l’avenir de chaque enfant, même dans les situations les plus difficiles.",vd2:"Oser agir, persévérer et défendre la dignité des plus vulnérables.",vd3:"Avancer ensemble : donateurs, bénévoles, partenaires et familles.",
+g1t:"Don financier",g1d:"Chaque contribution finance scolarité, repas, soins et matériel. Un reçu vous est remis sur demande.",g2t:"Don en nature",g2d:"Vêtements, fournitures scolaires, denrées et produits d’hygiène pour les orphelinats.",g3t:"Bénévolat",g3d:"Offrez du temps : soutien scolaire, animation, logistique ou communication.",g4t:"Partenariat",g4d:"Entreprises et institutions : mécénat, parrainage de projets et partage de compétences.",
+fq:"Chaque enfant mérite des ailes pour s’envoler.",fnl:"Restez informé(e) de nos actions",fnlp:"Une lettre par mois : nos actions, nos résultats et nos appels à la solidarité.",ftr:"Transparence",fhours:"Lun – Sam : 8h – 17h",lg1:"Mentions légales",lg2:"Confidentialité",
+motto:"ESPOIR · COURAGE · SOLIDARITÉ",n1:"Accueil",n2:"À propos",n3:"Nos missions",n4:"Impact",n5:"S’engager",n6:"Contact",donate:"Faire un don",
+kick:"Ensemble, nous pouvons",h1a:"Donnons des ailes",h1b:"à l’espoir.",
+lead:"Association engagée auprès des enfants et des orphelinats par l’éducation, la santé et l’accompagnement. <b>Chaque geste de solidarité change une vie.</b>",
+b1:"Découvrir nos missions",trust:"100 % transparent  |  100 % axé sur l’impact",badge:"Votre soutien aujourd’hui, leur avenir demain.",
+s1:"Enfants accompagnés",s2:"Orphelinats soutenus",s3:"Bénévoles actifs",s4:"Projets réalisés",s5:"Dons collectés (FCFA)",
+t1:"Qui sommes-nous ?",a1:"Une association au service de l’enfance",a2:"Les Ailes de l’Espoir mobilise bénévoles, partenaires et donateurs pour offrir aux enfants vulnérables et aux orphelinats un environnement sûr, digne et porteur d’avenir.",
+v1:"Espoir",v2:"Courage",v3:"Solidarité",w1:"Notre mission",w2:"Accompagner chaque enfant vers l’éducation, la santé et l’autonomie, avec transparence et bienveillance.",vi1:"Notre vision",vi2:"Une société où aucun enfant n’est laissé de côté et où chacun peut déployer ses ailes.",
+t2:"Nos domaines d’intervention",d0:"Cinq piliers pour transformer des vies",
+d1:"Éducation et scolarisation",d1p:"Fournitures, frais de scolarité et soutien scolaire pour garder chaque enfant à l’école.",
+d2:"Santé et nutrition",d2p:"Soins de base, campagnes de prévention et repas équilibrés.",
+d3:"Hébergement et protection",d3p:"Amélioration des conditions d’accueil et de sécurité des orphelinats.",
+d4:"Accompagnement psychosocial",d4p:"Écoute, suivi et activités pour aider les enfants à se reconstruire.",
+d5:"Autonomisation et insertion",d5p:"Formations et projets pour préparer l’avenir des jeunes.",
+t3:"Notre impact",k0:"Chiffres clés",
+t4:"Nos actions récentes",r0:"Sur le terrain",
+r1d:"📅 Date · 📍 Lieu",r1:"Distribution de kits scolaires à des enfants d’un orphelinat partenaire.",r2d:"📅 Date · 📍 Lieu",r2:"Repas partagés et dons de vivres aux enfants accueillis.",r3d:"📅 Date · 📍 Lieu",r3:"Journée de sensibilisation et de soins de santé de base.",
+t5:"Appel à la solidarité",c0:"Rejoignez le mouvement",c1:"Un don, une heure de votre temps ou un simple partage : tout compte pour offrir un avenir meilleur à un enfant.",vol:"Devenir bénévole",
+t6:"Ils nous font confiance",q0:"Témoignages et partenaires",
+q1:"« Grâce à l’association, nos enfants ont retrouvé le sourire et le chemin de l’école. »",q1a:"— Responsable d’orphelinat",q2:"« S’engager ici, c’est voir concrètement l’impact de son temps. »",q2a:"— Bénévole",q3:"« Une équipe sérieuse, transparente et profondément humaine. »",q3a:"— Partenaire",
+p1:"PARTENAIRE 1",p2:"PARTENAIRE 2",p3:"PARTENAIRE 3",p4:"PARTENAIRE 4",
+fabout:"Association à but non lucratif engagée auprès des enfants et des orphelinats : éducation, santé, protection et insertion. Ensemble, offrons-leur des ailes.",mail:"Votre e-mail",sub:"S’abonner",ok:"Merci pour votre inscription !",fl:"Navigation",fh:"Agir",fpa:"Devenir partenaire",rights:"Tous droits réservés."},
+en:{tv:"Our values",vh:"Three principles guiding everything we do",vd1:"Believing in every child’s future, even in the hardest situations.",vd2:"Daring to act, persevering and defending the dignity of the most vulnerable.",vd3:"Moving forward together: donors, volunteers, partners and families.",
+g1t:"Financial gift",g1d:"Every contribution funds schooling, meals, care and supplies. A receipt is available on request.",g2t:"In-kind gift",g2d:"Clothes, school supplies, food and hygiene products for orphanages.",g3t:"Volunteering",g3d:"Give your time: tutoring, activities, logistics or communication.",g4t:"Partnership",g4d:"Companies and institutions: sponsorship, project backing and skills sharing.",
+fq:"Every child deserves wings to take flight.",fnl:"Stay informed about our actions",fnlp:"One letter a month: our actions, our results and our calls for solidarity.",ftr:"Transparency",fhours:"Mon – Sat: 8am – 5pm",lg1:"Legal notice",lg2:"Privacy",
+motto:"HOPE · COURAGE · SOLIDARITY",n1:"Home",n2:"About",n3:"Our missions",n4:"Impact",n5:"Get involved",n6:"Contact",donate:"Donate now",
+kick:"Together, we can",h1a:"Give wings",h1b:"to hope.",
+lead:"An association committed to children and orphanages through education, healthcare and support. <b>Every act of solidarity changes a life.</b>",
+b1:"Discover our missions",trust:"100% Transparent  |  100% Impact Driven",badge:"Your support today, their better tomorrow.",
+s1:"Children supported",s2:"Orphanages supported",s3:"Active volunteers",s4:"Projects completed",s5:"Donations raised (XAF)",
+t1:"Who we are",a1:"An association serving children",a2:"Les Ailes de l’Espoir mobilizes volunteers, partners and donors to give vulnerable children and orphanages a safe, dignified environment with a future.",
+v1:"Hope",v2:"Courage",v3:"Solidarity",w1:"Our mission",w2:"To guide every child toward education, health and independence, with transparency and care.",vi1:"Our vision",vi2:"A society where no child is left behind and everyone can spread their wings.",
+t2:"Our areas of intervention",d0:"Five pillars to transform lives",
+d1:"Education and schooling",d1p:"Supplies, school fees and tutoring to keep every child in school.",
+d2:"Health and nutrition",d2p:"Basic care, prevention campaigns and balanced meals.",
+d3:"Housing and protection",d3p:"Better living and safety conditions in orphanages.",
+d4:"Psychosocial support",d4p:"Listening, follow-up and activities to help children heal.",
+d5:"Empowerment and inclusion",d5p:"Training and projects to prepare young people for the future.",
+t3:"Our impact",k0:"Key figures",
+t4:"Recent actions",r0:"On the ground",
+r1d:"📅 Date · 📍 Location",r1:"School kits handed out to children of a partner orphanage.",r2d:"📅 Date · 📍 Location",r2:"Shared meals and food donations for the children in care.",r3d:"📅 Date · 📍 Location",r3:"Awareness day with basic healthcare services.",
+t5:"Call for solidarity",c0:"Join the movement",c1:"A donation, an hour of your time or a simple share: everything counts to give a child a better future.",vol:"Become a volunteer",
+t6:"They trust us",q0:"Testimonials and partners",
+q1:"“Thanks to the association, our children found their smile and the way back to school.”",q1a:"— Orphanage director",q2:"“Getting involved here means seeing the real impact of your time.”",q2a:"— Volunteer",q3:"“A serious, transparent and deeply human team.”",q3a:"— Partner",
+p1:"PARTNER 1",p2:"PARTNER 2",p3:"PARTNER 3",p4:"PARTNER 4",
+fabout:"A non-profit association committed to children and orphanages: education, health, protection and inclusion. Together, let’s give them wings.",mail:"Your email",sub:"Subscribe",ok:"Thank you for subscribing!",fl:"Navigation",fh:"Take action",fpa:"Become a partner",rights:"All rights reserved."}};
+let L=localStorage.getItem("lang")||(navigator.language.startsWith("en")?"en":"fr");
+const $=s=>document.querySelectorAll(s);
+function apply(){document.documentElement.lang=L;
+$("[data-i]").forEach(e=>e.innerHTML=D[L][e.dataset.i]);
+$("[data-ph]").forEach(e=>e.placeholder=D[L][e.dataset.ph]);
+document.getElementById("lang").textContent=L=="fr"?"EN":"FR";
+document.title=D[L].motto+" | Les Ailes de l’Espoir";
+$("[data-c]").forEach(e=>{const t=+e.dataset.c,f=n=>n.toLocaleString(L=="fr"?"fr-FR":"en-US")+(e.dataset.cur?"":"+");let n=0;const st=t/50;clearInterval(e._t);e._t=setInterval(()=>{n+=st;if(n>=t){n=t;clearInterval(e._t)}e.textContent=f(Math.round(n))},25)})}
+document.getElementById("lang").onclick=()=>{L=L=="fr"?"en":"fr";try{localStorage.setItem("lang",L)}catch(e){}apply()};
+document.getElementById("bg").onclick=()=>document.getElementById("menu").classList.toggle("open");
+$("nav a").forEach(a=>a.onclick=()=>document.getElementById("menu").classList.remove("open"));
+document.getElementById("yr").textContent=new Date().getFullYear();
+apply();
+const MAIL="christian.nkouateba@gmail.com";
+const DOM=["d1","d2","d3","d4","d5"],TYPES=["m","v","d","p"];
+// form schema: [id,type,labelKey,required,options?,width]
+const SECS=[
+["fs1",[["type","radio","f_type",1,TYPES.map(x=>"ty_"+x),"w"]]],
+["fs2",[["civ","select","f_civ",1,["civ1","civ2"]],["nom","text","f_nom",1],["pre","text","f_pre",1],["dob","date","f_dob",1],["nat","text","f_nat",0],["job","text","f_job",0]]],
+["fs3",[["tel","tel","f_tel",1],["mail","email","f_mail",1],["pays","text","f_pays",1],["ville","text","f_ville",1],["adr","text","f_adr",0,null,"w"]]],
+["fs4",[["dom","check","f_dom",0,DOM,"w"],["dispo","select","f_dispo",1,["dp1","dp2","dp3","dp4"]],["comp","text","f_comp",0],["exp","textarea","f_exp",0,null,"w"],["mot","textarea","f_mot",1,null,"w"],["src","select","f_src",0,["sr1","sr2","sr3","sr4","sr5"]]]],
+["fs5",[["sig","text","f_sig",1]]]];
+const LEG={fs1:"g_1",fs2:"g_2",fs3:"g_3",fs4:"g_4",fs5:"g_5"};
+const form=document.getElementById("form");
+let h="";
+SECS.forEach(([id,fl])=>{h+=`<fieldset><legend data-i="${LEG[id]}"></legend><div class="row">`;
+fl.forEach(([n,t,k,r,o,w])=>{const req=r?" required":"",st=r?"<i> *</i>":"";
+h+=`<div class="fld ${w||""}"><label class="l" for="${n}" data-i-wrap><span data-i="${k}"></span>${st}</label>`;
+if(t=="select")h+=`<select id="${n}" name="${n}"${req}><option value="" data-i="choose"></option>${o.map(x=>`<option value="${x}" data-i="${x}"></option>`).join("")}</select>`;
+else if(t=="textarea")h+=`<textarea id="${n}" name="${n}"${req} placeholder=" "></textarea>`;
+else if(t=="radio")h+=`<div class="opts">${o.map((x,i)=>`<label class="opt"><input type="radio" name="${n}" value="${x}"${i?"":req}><span data-i="${x}"></span></label>`).join("")}</div>`;
+else if(t=="check")h+=`<div class="opts">${o.map(x=>`<label class="opt"><input type="checkbox" name="${n}" value="${x}"><span data-i="${x}"></span></label>`).join("")}</div>`;
+else h+=`<input id="${n}" name="${n}" type="${t}"${req} placeholder=" " ${t=="tel"?'pattern="[0-9+\\s().-]{8,20}"':""}>`;
+h+="</div>"});
+if(id=="fs5")h+=`</div><label class="chk"><input type="checkbox" id="c1" required><span data-i="f_c1"></span></label><label class="chk"><input type="checkbox" id="c2" required><span data-i="f_c2"></span></label><label class="chk"><input type="checkbox" id="c3" required><span data-i="f_c3"></span></label><div class="row" style="display:none">`;
+h+="</div></fieldset>"});
+h+=`<div class="send"><button type="submit" class="btn gold">✉ <span data-i="send"></span></button></div><p class="note" data-i="note"></p>`;
+form.innerHTML=h;
+
+Object.assign(D.fr,{
+p_tag:"Rejoindre l’association",p_h1:"Devenez une aile de l’Espoir",p_sub:"Membre, bénévole, donateur régulier ou partenaire : remplissez ce formulaire pour rejoindre Les Ailes de l’Espoir. Nous vous recontacterons rapidement.",
+p_s1:"Remplissez le formulaire",p_s2:"Un PDF est généré automatiquement",p_s3:"Il est envoyé par e-mail à l’association",
+g_1:"1. Type d’adhésion",g_2:"2. Identité",g_3:"3. Coordonnées",g_4:"4. Engagement",g_5:"5. Déclarations et signature",
+f_type:"Je souhaite devenir",ty_m:"Membre de l’association",ty_v:"Bénévole actif",ty_d:"Donateur régulier",ty_p:"Partenaire (entreprise / institution)",
+f_civ:"Civilité",civ1:"Monsieur",civ2:"Madame",choose:"— Choisir —",f_nom:"Nom",f_pre:"Prénom(s)",f_dob:"Date de naissance",f_nat:"Nationalité",f_job:"Profession / Établissement",
+f_tel:"Téléphone / WhatsApp",f_mail:"Adresse e-mail",f_pays:"Pays",f_ville:"Ville",f_adr:"Quartier / Adresse",
+f_dom:"Domaines qui m’intéressent",d1:"Éducation et scolarisation",d2:"Santé et nutrition",d3:"Hébergement et protection",d4:"Accompagnement psychosocial",d5:"Autonomisation et insertion",
+f_dispo:"Disponibilité",dp1:"Ponctuelle (événements)",dp2:"Week-ends",dp3:"Quelques heures par semaine",dp4:"Régulière / à plein temps",
+f_comp:"Compétences (enseignement, santé, informatique, communication…)",f_exp:"Expérience associative ou de bénévolat",f_mot:"Pourquoi souhaitez-vous rejoindre Les Ailes de l’Espoir ?",
+f_src:"Comment nous avez-vous connus ?",sr1:"Réseaux sociaux",sr2:"Un proche / ami",sr3:"Un événement",sr4:"Le site web",sr5:"Autre",
+f_sig:"Signature (nom et prénom complets)",f_c1:"Je certifie que les informations fournies sont exactes et que je suis majeur(e).",f_c2:"J’adhère aux valeurs de l’association : Espoir, Courage, Solidarité.",f_c3:"J’accepte que mes données soient utilisées par l’association pour traiter ma demande.",
+send:"Envoyer ma demande",note:"Le PDF est généré sur votre appareil. Vos données ne sont envoyées qu’à l’adresse e-mail de l’association.",
+d_t:"Presque terminé !",d_p:"Votre PDF est prêt. Si votre messagerie ne l’a pas joint automatiquement, ajoutez-le en pièce jointe au message pré-rempli, puis envoyez.",d_dl:"Télécharger le PDF",d_ml:"Ouvrir l’e-mail",
+subj:"Demande d’adhésion – Les Ailes de l’Espoir",body:"Bonjour,\n\nVeuillez trouver en pièce jointe ma demande d’adhésion à l’association Les Ailes de l’Espoir (fichier PDF).\n\nCordialement,",
+pdft:"Formulaire d’adhésion",pdfd:"Date de la demande",inval:"Merci de compléter les champs obligatoires (*).",none:"—"});
+Object.assign(D.en,{
+p_tag:"Join the association",p_h1:"Become a wing of Hope",p_sub:"Member, volunteer, regular donor or partner: fill in this form to join Les Ailes de l’Espoir. We will get back to you shortly.",
+p_s1:"Fill in the form",p_s2:"A PDF is generated automatically",p_s3:"It is emailed to the association",
+g_1:"1. Membership type",g_2:"2. Identity",g_3:"3. Contact details",g_4:"4. Commitment",g_5:"5. Declarations and signature",
+f_type:"I would like to become",ty_m:"A member",ty_v:"An active volunteer",ty_d:"A regular donor",ty_p:"A partner (company / institution)",
+f_civ:"Title",civ1:"Mr",civ2:"Mrs / Ms",choose:"— Select —",f_nom:"Last name",f_pre:"First name(s)",f_dob:"Date of birth",f_nat:"Nationality",f_job:"Occupation / Institution",
+f_tel:"Phone / WhatsApp",f_mail:"Email address",f_pays:"Country",f_ville:"City",f_adr:"Neighbourhood / Address",
+f_dom:"Areas I am interested in",d1:"Education and schooling",d2:"Health and nutrition",d3:"Housing and protection",d4:"Psychosocial support",d5:"Empowerment and inclusion",
+f_dispo:"Availability",dp1:"Occasional (events)",dp2:"Weekends",dp3:"A few hours a week",dp4:"Regular / full time",
+f_comp:"Skills (teaching, health, IT, communication…)",f_exp:"Association or volunteering experience",f_mot:"Why do you want to join Les Ailes de l’Espoir?",
+f_src:"How did you hear about us?",sr1:"Social media",sr2:"A relative / friend",sr3:"An event",sr4:"The website",sr5:"Other",
+f_sig:"Signature (full name)",f_c1:"I certify that the information provided is accurate and that I am of legal age.",f_c2:"I support the association’s values: Hope, Courage, Solidarity.",f_c3:"I agree that my data may be used by the association to process my request.",
+send:"Send my request",note:"The PDF is generated on your device. Your data is only sent to the association’s email address.",
+d_t:"Almost done!",d_p:"Your PDF is ready. If your email app did not attach it automatically, add it to the pre-filled message, then send.",d_dl:"Download the PDF",d_ml:"Open the email",
+subj:"Membership request – Les Ailes de l’Espoir",body:"Hello,\n\nPlease find attached my membership request for Les Ailes de l’Espoir association (PDF file).\n\nBest regards,",
+pdft:"Membership form",pdfd:"Request date",inval:"Please complete the required fields (*).",none:"—"});
+apply();
+
+const clean=x=>String(x).replace(/[’‘]/g,"'").replace(/[“”«»]/g,'"').replace(/[–—]/g,"-").replace(/[·•]/g,"-").replace(/…/g,"...");
+function collect(){const T=D[L],out=[];
+SECS.forEach(([id,fl])=>{const rows=[];
+fl.forEach(([n,t,k,r,o])=>{let v;
+if(t=="radio"){const c=form.querySelector(`[name=${n}]:checked`);v=c?T[c.value]:""}
+else if(t=="check"){v=[...form.querySelectorAll(`[name=${n}]:checked`)].map(c=>T[c.value]).join(", ")}
+else if(t=="select"){const e=form.elements[n];v=e.value?T[e.value]:""}
+else v=form.elements[n].value.trim();
+rows.push([T[k],v||T.none])});
+out.push([T[LEG[id]],rows])});return out}
+let blob=null,fname="",subject="",body="";
+function makePDF(){const {jsPDF}=window.jspdf,T=D[L],doc=new jsPDF({unit:"mm",format:"a4"});
+const W=210,M=18;let y=0;
+const head=()=>{doc.setFillColor(5,11,31);doc.rect(0,0,W,34,"F");doc.setFillColor(242,182,50);doc.rect(0,34,W,1.4,"F");
+doc.setTextColor(242,182,50);doc.setFont("helvetica","bold");doc.setFontSize(17);doc.text("LES AILES DE L'ESPOIR",M,15);
+doc.setTextColor(255,255,255);doc.setFontSize(10);doc.setFont("helvetica","normal");doc.text(clean(T.pdft)+"  |  ESPOIR - COURAGE - SOLIDARITE",M,23);doc.text(clean(T.pdfd)+" : "+new Date().toLocaleDateString(L=="fr"?"fr-FR":"en-GB"),M,29);y=46};
+head();
+collect().forEach(([title,rows])=>{
+if(y>262){doc.addPage();head()}
+doc.setFillColor(11,23,54);doc.rect(M,y-5,W-2*M,8,"F");doc.setTextColor(242,182,50);doc.setFont("helvetica","bold");doc.setFontSize(10.5);doc.text(clean(title).toUpperCase(),M+3,y+.5);y+=10;
+rows.forEach(([l,v])=>{const lines=doc.splitTextToSize(clean(v),W-2*M-62),ll=doc.splitTextToSize(clean(l),56);const hgt=Math.max(lines.length,ll.length)*5+2;
+if(y+hgt>280){doc.addPage();head()}
+doc.setFont("helvetica","bold");doc.setFontSize(9);doc.setTextColor(120,90,10);doc.text(ll,M,y);
+doc.setFont("helvetica","normal");doc.setFontSize(10);doc.setTextColor(25,30,50);doc.text(lines,M+60,y);y+=hgt;
+doc.setDrawColor(225,225,235);doc.line(M,y-3,W-M,y-3)});y+=5});
+const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFontSize(8);doc.setTextColor(130);doc.text("Les Ailes de l'Espoir - "+MAIL+" - "+i+"/"+n,W/2,291,{align:"center"})}
+return doc.output("blob")}
+const dl=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=fname;document.body.appendChild(a);a.click();a.remove()};
+const mail=()=>{location.href="mailto:"+MAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body)};
+form.addEventListener("submit",async e=>{e.preventDefault();
+if(!form.checkValidity()){form.reportValidity();return}
+const T=D[L],nom=form.elements.nom.value.trim(),pre=form.elements.pre.value.trim();
+subject=T.subj+" – "+nom.toUpperCase()+" "+pre;
+body=T.body+"\n"+pre+" "+nom;
+fname="Adhesion_"+(nom+"_"+pre).normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w]+/g,"_")+".pdf";
+blob=makePDF();
+const file=new File([blob],fname,{type:"application/pdf"});
+document.getElementById("done").style.display="block";document.getElementById("done").scrollIntoView({behavior:"smooth",block:"center"});
+const mobile=/Android|iPhone|iPad/i.test(navigator.userAgent);
+if(mobile&&navigator.canShare&&navigator.canShare({files:[file]})){
+try{await navigator.share({files:[file],title:subject,text:body+"\n\n("+MAIL+")"})}catch(_){}
+}else{dl();setTimeout(mail,600)}});
+document.getElementById("again").onclick=()=>blob&&dl();
+document.getElementById("mailb").onclick=mail;
+
+</script>
+</body>
+</html>
