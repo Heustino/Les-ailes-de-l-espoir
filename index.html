@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -645,6 +645,70 @@
                 justify-content:center
             }
         }
+
+        /* Bulle WhatsApp */
+        .wa-float{
+            position:fixed;
+            right:20px;
+            bottom:20px;
+            z-index:100;
+            display:flex;
+            align-items:center;
+            gap:10px;
+            flex-direction:row-reverse;
+            text-decoration:none
+        }
+        .wa-float .wa-ico{
+            width:60px;
+            height:60px;
+            border-radius:50%;
+            background:#25d366;
+            display:grid;
+            place-items:center;
+            box-shadow:0 6px 20px rgba(0,0,0,.4);
+            position:relative;
+            transition:transform .2s
+        }
+        .wa-float .wa-ico::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            border-radius:50%;
+            background:#25d366;
+            opacity:.6;
+            animation:waPulse 2s infinite;
+            z-index:-1
+        }
+        .wa-float:hover .wa-ico{transform:scale(1.08)}
+        .wa-float svg{width:32px;height:32px;fill:#fff}
+        .wa-float .wa-tip{
+            background:var(--bg);
+            color:var(--tx);
+            border:1px solid var(--gold);
+            padding:8px 14px;
+            border-radius:999px;
+            font-size:.85rem;
+            font-weight:600;
+            white-space:nowrap;
+            box-shadow:0 4px 14px rgba(0,0,0,.35)
+        }
+        @keyframes waPulse{
+            0%{transform:scale(1);opacity:.6}
+            100%{transform:scale(1.7);opacity:0}
+        }
+        @media(max-width:480px){
+            .wa-float{right:14px;bottom:14px}
+            .wa-float .wa-tip{display:none}
+        }
+        @media(prefers-reduced-motion:reduce){
+            .wa-float .wa-ico::before{animation:none}
+        }
+
+        .soc a svg{
+            width:18px;
+            height:18px;
+            fill:currentColor
+        }
     </style>
 </head>
 <body>
@@ -820,7 +884,6 @@
                         <p data-i="s2"></p>
                     </div>
                     <div class="num">
-                        <!-- <div class="ic">🤝</div> -->
                         <b data-c="20">0</b>
                         <p data-i="s3"></p>
                     </div>
@@ -950,12 +1013,28 @@
                 <div>
                     <img class="flogo" src="images/logo-full.png" alt="Les Ailes de l’Espoir" loading="lazy">
                     <p data-i="fabout"></p>
-                    <div class="soc">
+                    <!-- <div class="soc">
                         <a href="#" aria-label="Facebook">f</a>
                         <a href="#" aria-label="Instagram">ig</a>
                         <a href="#" aria-label="TikTok">tk</a>
                         <a href="#" aria-label="WhatsApp">wa</a>
+                    </div> -->
+
+                    <div class="soc">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8S15.6 3.5 14.3 3.5c-2.8 0-4.5 1.7-4.5 4.7v2.3H7v3.3h2.8V22h3.7z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.6-.4-3-1.6-4.2S16.7 2.6 15.1 2.5C13.4 2.4 10.6 2.4 8.9 2.5 7.3 2.6 5.9 2.9 4.7 4.1S3.1 6.6 3 8.2c-.1 1.700-.1 4.400 0 6.100.1 1.600.4 3 1.600 4.200s2.600 1.500 4.200 1.600c1.700.1 4.400.1 6.100 0 1.600-.1 3-.4 4.200-1.600s1.500-2.600 1.600-4.200c.1-1.700.1-4.400 0-6.100zM18.800 17.600a3.100 3.100 0 0 1-1.700 1.700c-1.200.5-4.100.4-5.100.4s-3.900.1-5.100-.4a3.100 3.100 0 0 1-1.700-1.700c-.5-1.200-.4-4.100-.4-5.100s-.1-3.900.4-5.100a3.100 3.100 0 0 1 1.700-1.700c1.200-.5 4.100-.4 5.100-.4s3.900-.1 5.100.4a3.100 3.100 0 0 1 1.700 1.700c.5 1.200.4 4.100.4 5.100s.1 3.900-.4 5.100z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.300a6.200 6.200 0 1 0 5.300 6.100V8.700a7.500 7.500 0 0 0 4.400 1.400V6.900A4.400 4.400 0 0 1 16.600 2z"/></svg>
+                        </a>
+                        <a href="https://wa.me/237640568651" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C9.374 3 4 8.373 4 15c0 2.116.553 4.18 1.602 6L4 29l8.175-1.57A12 12 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.78.73.77-3.68-.24-.38A9.76 9.76 0 0 1 6.2 15c0-5.42 4.4-9.8 9.8-9.8s9.8 4.38 9.8 9.8-4.4 9.8-9.8 9.8zm5.38-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+                        </a>
                     </div>
+
                 </div>
                 <div>
                     <h4 data-i="fl"></h4>
@@ -979,8 +1058,8 @@
                     <h4 data-i="n6"></h4>
                     <ul>
                         <li>Yaoundé, Cameroun</li>
-                        <li>christian.nkouateba@gmail.com</li>
-                        <li>+237 690 634 101 / 653 367 178</li>
+                        <li>adedaregineleonceanita@gmail.com</li>
+                        <li>+237 640 568 651</li>
                         <li><span data-i="fhours"></span></li>
                     </ul>
                 </div>
@@ -998,6 +1077,11 @@
             </div>
         </div>
     </footer>
+
+    <a class="wa-float" id="waFloat" href="https://wa.me/237640568651" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <span class="wa-ico"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C9.374 3 4 8.373 4 15c0 2.116.553 4.18 1.602 6L4 29l8.175-1.57A12 12 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.78.73.77-3.68-.24-.38A9.76 9.76 0 0 1 6.2 15c0-5.42 4.4-9.8 9.8-9.8s9.8 4.38 9.8 9.8-4.4 9.8-9.8 9.8zm5.38-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg></span>
+        <span class="wa-tip" id="waTip">Discuter avec l’assistante</span>
+    </a>
 
     <script>
         const D={
@@ -1116,6 +1200,7 @@ document.getElementById("bg").onclick=()=>document.getElementById("menu").classL
 $("nav a").forEach(a=>a.onclick=()=>document.getElementById("menu").classList.remove("open"));
 document.getElementById("yr").textContent=new Date().getFullYear();
 apply();
+(function(){const a=document.getElementById("waFloat"),t=document.getElementById("waTip");function w(){const en=L=="en";a.href="https://wa.me/237640568651?text="+encodeURIComponent(en?"Hello, I would like some information about Les Ailes de l’Espoir.":"Bonjour, je souhaite avoir des informations sur l’association Les Ailes de l’Espoir.");t.textContent=en?"Chat with our assistant":"Discuter avec l’assistante";a.setAttribute("aria-label",t.textContent)}w();document.getElementById("lang").addEventListener("click",w)})();
 </script>
 </body>
 </html>
