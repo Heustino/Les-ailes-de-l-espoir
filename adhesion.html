@@ -100,6 +100,7 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){b
 .note{text-align:center;color:var(--mut);font-size:.82rem;margin-top:14px}
 #done{display:none;max-width:860px;margin:26px auto 0;text-align:center;border:1px solid var(--gold);border-radius:16px;padding:28px;background:rgba(242,182,50,.1)}#done h3{color:var(--gold2);margin-bottom:8px}#done .cta{justify-content:center;margin:18px 0 0}
 @media(max-width:700px){.row,.steps{grid-template-columns:1fr}fieldset{padding:18px}}
+.soc a svg{width:18px;height:18px;fill:currentColor}
 </style>
 </head>
 <body>
@@ -131,12 +132,28 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){b
                 <div>
                     <img class="flogo" src="images/logo-full.png" alt="Les Ailes de l’Espoir" loading="lazy">
                     <p data-i="fabout"></p>
-                    <div class="soc">
+                    <!-- <div class="soc">
                         <a href="#" aria-label="Facebook">f</a>
                         <a href="#" aria-label="Instagram">ig</a>
                         <a href="#" aria-label="TikTok">tk</a>
                         <a href="#" aria-label="WhatsApp">wa</a>
+                    </div> -->
+
+                    <div class="soc">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8S15.6 3.5 14.3 3.5c-2.8 0-4.5 1.7-4.5 4.7v2.3H7v3.3h2.8V22h3.7z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.3A4.7 4.7 0 1 0 12 16.7 4.7 4.7 0 0 0 12 7.3zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm5-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0zM21 8.2c-.1-1.6-.4-3-1.6-4.2S16.7 2.6 15.1 2.5C13.4 2.4 10.6 2.4 8.9 2.5 7.3 2.6 5.9 2.9 4.7 4.1S3.1 6.6 3 8.2c-.1 1.700-.1 4.400 0 6.100.1 1.600.4 3 1.600 4.200s2.600 1.500 4.200 1.600c1.700.1 4.400.1 6.100 0 1.600-.1 3-.4 4.200-1.600s1.500-2.600 1.600-4.200c.1-1.700.1-4.400 0-6.100zM18.800 17.600a3.100 3.100 0 0 1-1.700 1.700c-1.200.5-4.100.4-5.100.4s-3.900.1-5.100-.4a3.100 3.100 0 0 1-1.700-1.700c-.5-1.200-.4-4.100-.4-5.100s-.1-3.900.4-5.100a3.100 3.100 0 0 1 1.700-1.700c1.200-.5 4.100-.4 5.100-.4s3.900-.1 5.100.4a3.100 3.100 0 0 1 1.700 1.700c.5 1.200.4 4.100.4 5.100s.1 3.900-.4 5.100z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.300a6.200 6.200 0 1 0 5.300 6.100V8.700a7.500 7.500 0 0 0 4.400 1.400V6.900A4.400 4.400 0 0 1 16.600 2z"/></svg>
+                        </a>
+                        <a href="https://wa.me/237640568651" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.003 3C9.374 3 4 8.373 4 15c0 2.116.553 4.18 1.602 6L4 29l8.175-1.57A12 12 0 0 0 16.003 27C22.63 27 28 21.627 28 15S22.63 3 16.003 3zm0 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.78.73.77-3.68-.24-.38A9.76 9.76 0 0 1 6.2 15c0-5.42 4.4-9.8 9.8-9.8s9.8 4.38 9.8 9.8-4.4 9.8-9.8 9.8zm5.38-7.34c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+                        </a>
                     </div>
+
                 </div>
                 <div>
                     <h4 data-i="fl"></h4>
@@ -160,8 +177,8 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){b
                     <h4 data-i="n6"></h4>
                     <ul>
                         <li>Yaoundé, Cameroun</li>
-                        <li>christian.nkouateba@gmail.com</li>
-                        <li>+237 690 634 101 / 653 367 178</li>
+                        <li>adedaregineleonceanita@gmail.com</li>
+                        <li>+237 640 568 651</li>
                         <li><span data-i="fhours"></span></li>
                     </ul>
                 </div>
@@ -179,6 +196,7 @@ input:invalid:not(:placeholder-shown),textarea:invalid:not(:placeholder-shown){b
             </div>
         </div>
     </footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>
 const D={
@@ -187,167 +205,4 @@ g1t:"Don financier",g1d:"Chaque contribution finance scolarité, repas, soins et
 fq:"Chaque enfant mérite des ailes pour s’envoler.",fnl:"Restez informé(e) de nos actions",fnlp:"Une lettre par mois : nos actions, nos résultats et nos appels à la solidarité.",ftr:"Transparence",fhours:"Lun – Sam : 8h – 17h",lg1:"Mentions légales",lg2:"Confidentialité",
 motto:"ESPOIR · COURAGE · SOLIDARITÉ",n1:"Accueil",n2:"À propos",n3:"Nos missions",n4:"Impact",n5:"S’engager",n6:"Contact",donate:"Faire un don",
 kick:"Ensemble, nous pouvons",h1a:"Donnons des ailes",h1b:"à l’espoir.",
-lead:"Association engagée auprès des enfants et des orphelinats par l’éducation, la santé et l’accompagnement. <b>Chaque geste de solidarité change une vie.</b>",
-b1:"Découvrir nos missions",trust:"100 % transparent  |  100 % axé sur l’impact",badge:"Votre soutien aujourd’hui, leur avenir demain.",
-s1:"Enfants accompagnés",s2:"Orphelinats soutenus",s3:"Bénévoles actifs",s4:"Projets réalisés",s5:"Dons collectés (FCFA)",
-t1:"Qui sommes-nous ?",a1:"Une association au service de l’enfance",a2:"Les Ailes de l’Espoir mobilise bénévoles, partenaires et donateurs pour offrir aux enfants vulnérables et aux orphelinats un environnement sûr, digne et porteur d’avenir.",
-v1:"Espoir",v2:"Courage",v3:"Solidarité",w1:"Notre mission",w2:"Accompagner chaque enfant vers l’éducation, la santé et l’autonomie, avec transparence et bienveillance.",vi1:"Notre vision",vi2:"Une société où aucun enfant n’est laissé de côté et où chacun peut déployer ses ailes.",
-t2:"Nos domaines d’intervention",d0:"Cinq piliers pour transformer des vies",
-d1:"Éducation et scolarisation",d1p:"Fournitures, frais de scolarité et soutien scolaire pour garder chaque enfant à l’école.",
-d2:"Santé et nutrition",d2p:"Soins de base, campagnes de prévention et repas équilibrés.",
-d3:"Hébergement et protection",d3p:"Amélioration des conditions d’accueil et de sécurité des orphelinats.",
-d4:"Accompagnement psychosocial",d4p:"Écoute, suivi et activités pour aider les enfants à se reconstruire.",
-d5:"Autonomisation et insertion",d5p:"Formations et projets pour préparer l’avenir des jeunes.",
-t3:"Notre impact",k0:"Chiffres clés",
-t4:"Nos actions récentes",r0:"Sur le terrain",
-r1d:"📅 Date · 📍 Lieu",r1:"Distribution de kits scolaires à des enfants d’un orphelinat partenaire.",r2d:"📅 Date · 📍 Lieu",r2:"Repas partagés et dons de vivres aux enfants accueillis.",r3d:"📅 Date · 📍 Lieu",r3:"Journée de sensibilisation et de soins de santé de base.",
-t5:"Appel à la solidarité",c0:"Rejoignez le mouvement",c1:"Un don, une heure de votre temps ou un simple partage : tout compte pour offrir un avenir meilleur à un enfant.",vol:"Devenir bénévole",
-t6:"Ils nous font confiance",q0:"Témoignages et partenaires",
-q1:"« Grâce à l’association, nos enfants ont retrouvé le sourire et le chemin de l’école. »",q1a:"— Responsable d’orphelinat",q2:"« S’engager ici, c’est voir concrètement l’impact de son temps. »",q2a:"— Bénévole",q3:"« Une équipe sérieuse, transparente et profondément humaine. »",q3a:"— Partenaire",
-p1:"PARTENAIRE 1",p2:"PARTENAIRE 2",p3:"PARTENAIRE 3",p4:"PARTENAIRE 4",
-fabout:"Association à but non lucratif engagée auprès des enfants et des orphelinats : éducation, santé, protection et insertion. Ensemble, offrons-leur des ailes.",mail:"Votre e-mail",sub:"S’abonner",ok:"Merci pour votre inscription !",fl:"Navigation",fh:"Agir",fpa:"Devenir partenaire",rights:"Tous droits réservés."},
-en:{tv:"Our values",vh:"Three principles guiding everything we do",vd1:"Believing in every child’s future, even in the hardest situations.",vd2:"Daring to act, persevering and defending the dignity of the most vulnerable.",vd3:"Moving forward together: donors, volunteers, partners and families.",
-g1t:"Financial gift",g1d:"Every contribution funds schooling, meals, care and supplies. A receipt is available on request.",g2t:"In-kind gift",g2d:"Clothes, school supplies, food and hygiene products for orphanages.",g3t:"Volunteering",g3d:"Give your time: tutoring, activities, logistics or communication.",g4t:"Partnership",g4d:"Companies and institutions: sponsorship, project backing and skills sharing.",
-fq:"Every child deserves wings to take flight.",fnl:"Stay informed about our actions",fnlp:"One letter a month: our actions, our results and our calls for solidarity.",ftr:"Transparency",fhours:"Mon – Sat: 8am – 5pm",lg1:"Legal notice",lg2:"Privacy",
-motto:"HOPE · COURAGE · SOLIDARITY",n1:"Home",n2:"About",n3:"Our missions",n4:"Impact",n5:"Get involved",n6:"Contact",donate:"Donate now",
-kick:"Together, we can",h1a:"Give wings",h1b:"to hope.",
-lead:"An association committed to children and orphanages through education, healthcare and support. <b>Every act of solidarity changes a life.</b>",
-b1:"Discover our missions",trust:"100% Transparent  |  100% Impact Driven",badge:"Your support today, their better tomorrow.",
-s1:"Children supported",s2:"Orphanages supported",s3:"Active volunteers",s4:"Projects completed",s5:"Donations raised (XAF)",
-t1:"Who we are",a1:"An association serving children",a2:"Les Ailes de l’Espoir mobilizes volunteers, partners and donors to give vulnerable children and orphanages a safe, dignified environment with a future.",
-v1:"Hope",v2:"Courage",v3:"Solidarity",w1:"Our mission",w2:"To guide every child toward education, health and independence, with transparency and care.",vi1:"Our vision",vi2:"A society where no child is left behind and everyone can spread their wings.",
-t2:"Our areas of intervention",d0:"Five pillars to transform lives",
-d1:"Education and schooling",d1p:"Supplies, school fees and tutoring to keep every child in school.",
-d2:"Health and nutrition",d2p:"Basic care, prevention campaigns and balanced meals.",
-d3:"Housing and protection",d3p:"Better living and safety conditions in orphanages.",
-d4:"Psychosocial support",d4p:"Listening, follow-up and activities to help children heal.",
-d5:"Empowerment and inclusion",d5p:"Training and projects to prepare young people for the future.",
-t3:"Our impact",k0:"Key figures",
-t4:"Recent actions",r0:"On the ground",
-r1d:"📅 Date · 📍 Location",r1:"School kits handed out to children of a partner orphanage.",r2d:"📅 Date · 📍 Location",r2:"Shared meals and food donations for the children in care.",r3d:"📅 Date · 📍 Location",r3:"Awareness day with basic healthcare services.",
-t5:"Call for solidarity",c0:"Join the movement",c1:"A donation, an hour of your time or a simple share: everything counts to give a child a better future.",vol:"Become a volunteer",
-t6:"They trust us",q0:"Testimonials and partners",
-q1:"“Thanks to the association, our children found their smile and the way back to school.”",q1a:"— Orphanage director",q2:"“Getting involved here means seeing the real impact of your time.”",q2a:"— Volunteer",q3:"“A serious, transparent and deeply human team.”",q3a:"— Partner",
-p1:"PARTNER 1",p2:"PARTNER 2",p3:"PARTNER 3",p4:"PARTNER 4",
-fabout:"A non-profit association committed to children and orphanages: education, health, protection and inclusion. Together, let’s give them wings.",mail:"Your email",sub:"Subscribe",ok:"Thank you for subscribing!",fl:"Navigation",fh:"Take action",fpa:"Become a partner",rights:"All rights reserved."}};
-let L=localStorage.getItem("lang")||(navigator.language.startsWith("en")?"en":"fr");
-const $=s=>document.querySelectorAll(s);
-function apply(){document.documentElement.lang=L;
-$("[data-i]").forEach(e=>e.innerHTML=D[L][e.dataset.i]);
-$("[data-ph]").forEach(e=>e.placeholder=D[L][e.dataset.ph]);
-document.getElementById("lang").textContent=L=="fr"?"EN":"FR";
-document.title=D[L].motto+" | Les Ailes de l’Espoir";
-$("[data-c]").forEach(e=>{const t=+e.dataset.c,f=n=>n.toLocaleString(L=="fr"?"fr-FR":"en-US")+(e.dataset.cur?"":"+");let n=0;const st=t/50;clearInterval(e._t);e._t=setInterval(()=>{n+=st;if(n>=t){n=t;clearInterval(e._t)}e.textContent=f(Math.round(n))},25)})}
-document.getElementById("lang").onclick=()=>{L=L=="fr"?"en":"fr";try{localStorage.setItem("lang",L)}catch(e){}apply()};
-document.getElementById("bg").onclick=()=>document.getElementById("menu").classList.toggle("open");
-$("nav a").forEach(a=>a.onclick=()=>document.getElementById("menu").classList.remove("open"));
-document.getElementById("yr").textContent=new Date().getFullYear();
-apply();
-const MAIL="christian.nkouateba@gmail.com";
-const DOM=["d1","d2","d3","d4","d5"],TYPES=["m","v","d","p"];
-// form schema: [id,type,labelKey,required,options?,width]
-const SECS=[
-["fs1",[["type","radio","f_type",1,TYPES.map(x=>"ty_"+x),"w"]]],
-["fs2",[["civ","select","f_civ",1,["civ1","civ2"]],["nom","text","f_nom",1],["pre","text","f_pre",1],["dob","date","f_dob",1],["nat","text","f_nat",0],["job","text","f_job",0]]],
-["fs3",[["tel","tel","f_tel",1],["mail","email","f_mail",1],["pays","text","f_pays",1],["ville","text","f_ville",1],["adr","text","f_adr",0,null,"w"]]],
-["fs4",[["dom","check","f_dom",0,DOM,"w"],["dispo","select","f_dispo",1,["dp1","dp2","dp3","dp4"]],["comp","text","f_comp",0],["exp","textarea","f_exp",0,null,"w"],["mot","textarea","f_mot",1,null,"w"],["src","select","f_src",0,["sr1","sr2","sr3","sr4","sr5"]]]],
-["fs5",[["sig","text","f_sig",1]]]];
-const LEG={fs1:"g_1",fs2:"g_2",fs3:"g_3",fs4:"g_4",fs5:"g_5"};
-const form=document.getElementById("form");
-let h="";
-SECS.forEach(([id,fl])=>{h+=`<fieldset><legend data-i="${LEG[id]}"></legend><div class="row">`;
-fl.forEach(([n,t,k,r,o,w])=>{const req=r?" required":"",st=r?"<i> *</i>":"";
-h+=`<div class="fld ${w||""}"><label class="l" for="${n}" data-i-wrap><span data-i="${k}"></span>${st}</label>`;
-if(t=="select")h+=`<select id="${n}" name="${n}"${req}><option value="" data-i="choose"></option>${o.map(x=>`<option value="${x}" data-i="${x}"></option>`).join("")}</select>`;
-else if(t=="textarea")h+=`<textarea id="${n}" name="${n}"${req} placeholder=" "></textarea>`;
-else if(t=="radio")h+=`<div class="opts">${o.map((x,i)=>`<label class="opt"><input type="radio" name="${n}" value="${x}"${i?"":req}><span data-i="${x}"></span></label>`).join("")}</div>`;
-else if(t=="check")h+=`<div class="opts">${o.map(x=>`<label class="opt"><input type="checkbox" name="${n}" value="${x}"><span data-i="${x}"></span></label>`).join("")}</div>`;
-else h+=`<input id="${n}" name="${n}" type="${t}"${req} placeholder=" " ${t=="tel"?'pattern="[0-9+\\s().-]{8,20}"':""}>`;
-h+="</div>"});
-if(id=="fs5")h+=`</div><label class="chk"><input type="checkbox" id="c1" required><span data-i="f_c1"></span></label><label class="chk"><input type="checkbox" id="c2" required><span data-i="f_c2"></span></label><label class="chk"><input type="checkbox" id="c3" required><span data-i="f_c3"></span></label><div class="row" style="display:none">`;
-h+="</div></fieldset>"});
-h+=`<div class="send"><button type="submit" class="btn gold">✉ <span data-i="send"></span></button></div><p class="note" data-i="note"></p>`;
-form.innerHTML=h;
-
-Object.assign(D.fr,{
-p_tag:"Rejoindre l’association",p_h1:"Devenez une aile de l’Espoir",p_sub:"Membre, bénévole, donateur régulier ou partenaire : remplissez ce formulaire pour rejoindre Les Ailes de l’Espoir. Nous vous recontacterons rapidement.",
-p_s1:"Remplissez le formulaire",p_s2:"Un PDF est généré automatiquement",p_s3:"Il est envoyé par e-mail à l’association",
-g_1:"1. Type d’adhésion",g_2:"2. Identité",g_3:"3. Coordonnées",g_4:"4. Engagement",g_5:"5. Déclarations et signature",
-f_type:"Je souhaite devenir",ty_m:"Membre de l’association",ty_v:"Bénévole actif",ty_d:"Donateur régulier",ty_p:"Partenaire (entreprise / institution)",
-f_civ:"Civilité",civ1:"Monsieur",civ2:"Madame",choose:"— Choisir —",f_nom:"Nom",f_pre:"Prénom(s)",f_dob:"Date de naissance",f_nat:"Nationalité",f_job:"Profession / Établissement",
-f_tel:"Téléphone / WhatsApp",f_mail:"Adresse e-mail",f_pays:"Pays",f_ville:"Ville",f_adr:"Quartier / Adresse",
-f_dom:"Domaines qui m’intéressent",d1:"Éducation et scolarisation",d2:"Santé et nutrition",d3:"Hébergement et protection",d4:"Accompagnement psychosocial",d5:"Autonomisation et insertion",
-f_dispo:"Disponibilité",dp1:"Ponctuelle (événements)",dp2:"Week-ends",dp3:"Quelques heures par semaine",dp4:"Régulière / à plein temps",
-f_comp:"Compétences (enseignement, santé, informatique, communication…)",f_exp:"Expérience associative ou de bénévolat",f_mot:"Pourquoi souhaitez-vous rejoindre Les Ailes de l’Espoir ?",
-f_src:"Comment nous avez-vous connus ?",sr1:"Réseaux sociaux",sr2:"Un proche / ami",sr3:"Un événement",sr4:"Le site web",sr5:"Autre",
-f_sig:"Signature (nom et prénom complets)",f_c1:"Je certifie que les informations fournies sont exactes et que je suis majeur(e).",f_c2:"J’adhère aux valeurs de l’association : Espoir, Courage, Solidarité.",f_c3:"J’accepte que mes données soient utilisées par l’association pour traiter ma demande.",
-send:"Envoyer ma demande",note:"Le PDF est généré sur votre appareil. Vos données ne sont envoyées qu’à l’adresse e-mail de l’association.",
-d_t:"Presque terminé !",d_p:"Votre PDF est prêt. Si votre messagerie ne l’a pas joint automatiquement, ajoutez-le en pièce jointe au message pré-rempli, puis envoyez.",d_dl:"Télécharger le PDF",d_ml:"Ouvrir l’e-mail",
-subj:"Demande d’adhésion – Les Ailes de l’Espoir",body:"Bonjour,\n\nVeuillez trouver en pièce jointe ma demande d’adhésion à l’association Les Ailes de l’Espoir (fichier PDF).\n\nCordialement,",
-pdft:"Formulaire d’adhésion",pdfd:"Date de la demande",inval:"Merci de compléter les champs obligatoires (*).",none:"—"});
-Object.assign(D.en,{
-p_tag:"Join the association",p_h1:"Become a wing of Hope",p_sub:"Member, volunteer, regular donor or partner: fill in this form to join Les Ailes de l’Espoir. We will get back to you shortly.",
-p_s1:"Fill in the form",p_s2:"A PDF is generated automatically",p_s3:"It is emailed to the association",
-g_1:"1. Membership type",g_2:"2. Identity",g_3:"3. Contact details",g_4:"4. Commitment",g_5:"5. Declarations and signature",
-f_type:"I would like to become",ty_m:"A member",ty_v:"An active volunteer",ty_d:"A regular donor",ty_p:"A partner (company / institution)",
-f_civ:"Title",civ1:"Mr",civ2:"Mrs / Ms",choose:"— Select —",f_nom:"Last name",f_pre:"First name(s)",f_dob:"Date of birth",f_nat:"Nationality",f_job:"Occupation / Institution",
-f_tel:"Phone / WhatsApp",f_mail:"Email address",f_pays:"Country",f_ville:"City",f_adr:"Neighbourhood / Address",
-f_dom:"Areas I am interested in",d1:"Education and schooling",d2:"Health and nutrition",d3:"Housing and protection",d4:"Psychosocial support",d5:"Empowerment and inclusion",
-f_dispo:"Availability",dp1:"Occasional (events)",dp2:"Weekends",dp3:"A few hours a week",dp4:"Regular / full time",
-f_comp:"Skills (teaching, health, IT, communication…)",f_exp:"Association or volunteering experience",f_mot:"Why do you want to join Les Ailes de l’Espoir?",
-f_src:"How did you hear about us?",sr1:"Social media",sr2:"A relative / friend",sr3:"An event",sr4:"The website",sr5:"Other",
-f_sig:"Signature (full name)",f_c1:"I certify that the information provided is accurate and that I am of legal age.",f_c2:"I support the association’s values: Hope, Courage, Solidarity.",f_c3:"I agree that my data may be used by the association to process my request.",
-send:"Send my request",note:"The PDF is generated on your device. Your data is only sent to the association’s email address.",
-d_t:"Almost done!",d_p:"Your PDF is ready. If your email app did not attach it automatically, add it to the pre-filled message, then send.",d_dl:"Download the PDF",d_ml:"Open the email",
-subj:"Membership request – Les Ailes de l’Espoir",body:"Hello,\n\nPlease find attached my membership request for Les Ailes de l’Espoir association (PDF file).\n\nBest regards,",
-pdft:"Membership form",pdfd:"Request date",inval:"Please complete the required fields (*).",none:"—"});
-apply();
-
-const clean=x=>String(x).replace(/[’‘]/g,"'").replace(/[“”«»]/g,'"').replace(/[–—]/g,"-").replace(/[·•]/g,"-").replace(/…/g,"...");
-function collect(){const T=D[L],out=[];
-SECS.forEach(([id,fl])=>{const rows=[];
-fl.forEach(([n,t,k,r,o])=>{let v;
-if(t=="radio"){const c=form.querySelector(`[name=${n}]:checked`);v=c?T[c.value]:""}
-else if(t=="check"){v=[...form.querySelectorAll(`[name=${n}]:checked`)].map(c=>T[c.value]).join(", ")}
-else if(t=="select"){const e=form.elements[n];v=e.value?T[e.value]:""}
-else v=form.elements[n].value.trim();
-rows.push([T[k],v||T.none])});
-out.push([T[LEG[id]],rows])});return out}
-let blob=null,fname="",subject="",body="";
-function makePDF(){const {jsPDF}=window.jspdf,T=D[L],doc=new jsPDF({unit:"mm",format:"a4"});
-const W=210,M=18;let y=0;
-const head=()=>{doc.setFillColor(5,11,31);doc.rect(0,0,W,34,"F");doc.setFillColor(242,182,50);doc.rect(0,34,W,1.4,"F");
-doc.setTextColor(242,182,50);doc.setFont("helvetica","bold");doc.setFontSize(17);doc.text("LES AILES DE L'ESPOIR",M,15);
-doc.setTextColor(255,255,255);doc.setFontSize(10);doc.setFont("helvetica","normal");doc.text(clean(T.pdft)+"  |  ESPOIR - COURAGE - SOLIDARITE",M,23);doc.text(clean(T.pdfd)+" : "+new Date().toLocaleDateString(L=="fr"?"fr-FR":"en-GB"),M,29);y=46};
-head();
-collect().forEach(([title,rows])=>{
-if(y>262){doc.addPage();head()}
-doc.setFillColor(11,23,54);doc.rect(M,y-5,W-2*M,8,"F");doc.setTextColor(242,182,50);doc.setFont("helvetica","bold");doc.setFontSize(10.5);doc.text(clean(title).toUpperCase(),M+3,y+.5);y+=10;
-rows.forEach(([l,v])=>{const lines=doc.splitTextToSize(clean(v),W-2*M-62),ll=doc.splitTextToSize(clean(l),56);const hgt=Math.max(lines.length,ll.length)*5+2;
-if(y+hgt>280){doc.addPage();head()}
-doc.setFont("helvetica","bold");doc.setFontSize(9);doc.setTextColor(120,90,10);doc.text(ll,M,y);
-doc.setFont("helvetica","normal");doc.setFontSize(10);doc.setTextColor(25,30,50);doc.text(lines,M+60,y);y+=hgt;
-doc.setDrawColor(225,225,235);doc.line(M,y-3,W-M,y-3)});y+=5});
-const n=doc.getNumberOfPages();for(let i=1;i<=n;i++){doc.setPage(i);doc.setFontSize(8);doc.setTextColor(130);doc.text("Les Ailes de l'Espoir - "+MAIL+" - "+i+"/"+n,W/2,291,{align:"center"})}
-return doc.output("blob")}
-const dl=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download=fname;document.body.appendChild(a);a.click();a.remove()};
-const mail=()=>{location.href="mailto:"+MAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(body)};
-form.addEventListener("submit",async e=>{e.preventDefault();
-if(!form.checkValidity()){form.reportValidity();return}
-const T=D[L],nom=form.elements.nom.value.trim(),pre=form.elements.pre.value.trim();
-subject=T.subj+" – "+nom.toUpperCase()+" "+pre;
-body=T.body+"\n"+pre+" "+nom;
-fname="Adhesion_"+(nom+"_"+pre).normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^\w]+/g,"_")+".pdf";
-blob=makePDF();
-const file=new File([blob],fname,{type:"application/pdf"});
-document.getElementById("done").style.display="block";document.getElementById("done").scrollIntoView({behavior:"smooth",block:"center"});
-const mobile=/Android|iPhone|iPad/i.test(navigator.userAgent);
-if(mobile&&navigator.canShare&&navigator.canShare({files:[file]})){
-try{await navigator.share({files:[file],title:subject,text:body+"\n\n("+MAIL+")"})}catch(_){}
-}else{dl();setTimeout(mail,600)}});
-document.getElementById("again").onclick=()=>blob&&dl();
-document.getElementById("mailb").onclick=mail;
-
-</script>
-</body>
-</html>
+lead:"Association engagée auprès des enfants et des orphelina
